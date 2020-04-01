@@ -14,11 +14,6 @@
     "tonpm": "nrm use npm && npm publish",
     "clear": "npm cache clean --force"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/vue-cli-plugin-commitlint/lib/cz"

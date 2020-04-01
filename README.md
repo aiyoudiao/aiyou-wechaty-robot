@@ -43,8 +43,8 @@ aiyou-robot 是一个 TypeScript 微信机器人，是基于 github 上一款 7.
 
 ## ✨ 效果展示
 
-![./ipad_scan_code.png](./ipad_scan_code.png)  
-![./werobot_back.png](./werobot_back.png)  
+![./ipad_scan_code.png](sources/ipad_scan_code.png)  
+![./werobot_back.png](sources/werobot_back.png)  
 
 ## 📚 把需求列出来吧
 
