@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="sources/ipad_scaned_confirm_code.png" alt="aiyou-robot" width="100%"/>
+    <img src="./sources/ipad_scaned_confirm_code2.png" alt="aiyou-robot" width="100%"/>
 </p>
 
 # aiyou-robot（轻量 robot ）- TypeScript 微信机器人 MVP
@@ -43,8 +43,8 @@ aiyou-robot 是一个 TypeScript 微信机器人，是基于 github 上一款 7.
 
 ## ✨ 效果展示
 
-![./ipad_scan_code.png](sources/ipad_scan_code.png)  
-![./werobot_back.png](sources/werobot_back.png)  
+![./sources/ipad_scan_code1.png](./sources/ipad_scan_code1.png)  
+![./sources/werobot_back3.png](./sources/werobot_back3.png)  
 
 ## 📚 把需求列出来吧
 
@@ -113,4 +113,3 @@ aiyou-robot 是一个 TypeScript 微信机器人，是基于 github 上一款 7.
   4. 加群自动欢迎配置
   5. 敏感词配置
   6. 个人信息管理
-

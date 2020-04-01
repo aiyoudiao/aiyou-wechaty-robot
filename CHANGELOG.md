@@ -10,3 +10,9 @@
 --|--|--
  整个项目 | 开源微信机器人提交代码，整体框架ok，只需要继续完成README.md中的功能即可。 | [7462f2b](https://github.com/aiyoudiao/aiyou-wechaty-robot/commit/7462f2b)
 
+
+### 📝 文档
+范围|描述|commitId
+--|--|--
+ README文档 | 纠正功能效果展示的路径 | [69f2b33](https://github.com/aiyoudiao/aiyou-wechaty-robot/commit/69f2b33)
+
