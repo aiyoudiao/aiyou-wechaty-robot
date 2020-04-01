@@ -1,0 +1,38 @@
+### https://juejin.im/post/5e2067f7f265da3e405028fb?utm_source=gold_browser_extensionf
+### https://marketplace.visualstudio.com/items?itemName=humao.rest-client#overview
+
+### 测试接口 RFC2616 标准的POST请求
+POST http://dummy.restapiexample.com/api/v1/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Hendry",
+    "salary": "61888",
+    "age": "26"
+}
+
+### 测试接口 cURL
+curl -X POST "http://dummy.restapiexample.com/api/v1/create" -d "Hello World"
+
+### 测试接口 RFC2616 标准的POST请求 | demo
+GET http://www.dell-lee.com/react/api/demo.json HTTP/1.1
+Content-Type: application/json
+
+{}
+
+### 测试接口 cURL | demo
+curl -X GET "http://www.dell-lee.com/react/api/demo.json" -d ""
+
+### 测试接口 cURL | demo
+curl -X GET "https://go.microsoft.com/fwlink/?linkid=2069439&platform=Mac&Consent=1&channel=Beta" -d ""
+
+### 测试接口 cURL | demo
+GET https://go.microsoft.com/fwlink/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "linkid":2069324,
+    "Channel":"Dev",
+    "language":"en",
+    "Consent":1
+}

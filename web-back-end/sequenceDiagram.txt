@@ -1,0 +1,35 @@
+sequenceDiagram
+    autonumber
+
+    participant users as 好友、群组成员<br/>、管理员(真人)
+    participant robot as 用户(机器人)
+    participant wechaty as 第三方服务平台<br/>(wechaty开源社区)
+    participant typescript as 微信群平台<br/>(typescript)
+    participant rbq as 微信群平台消息队列<br/>(rabbitMQ)
+    participant wx as 微信(官方)
+    participant java as  微信群管理平台<br/>(java)
+    participant mysql as 微信群平台<br/>数据库(mysql)
+
+    robot ->> wechaty : 扫码登录
+    wechaty ->> wx : 代理授权登录
+    wx -->> wechaty : 登录成功
+    wechaty -->> typescript : 登录状态正常
+
+    loop socket通信
+        typescript ->> wechaty : 监听服务
+        wechaty -->> typescript : 推送微信消息
+    end
+
+    loop 序列化 ==> 反序列化 ==> 持久化
+        %% typescript先整理微信消息，进行拼装、格式化
+        typescript -->> rbq: 消息放入队列
+        java -->> rbq : 从队列中取出每个消息
+        java ->> mysql: 放入数据库
+    end
+    users ->> robot : @(艾特)、私聊、主动查询
+    robot ->> typescript: 处理一下
+    typescript ->> java : 关键字，你去查询数据库
+    java ->> mysql: 查询数据库
+    java -->> typescript: 返回数据
+    typescript -->> robot: 整理数据，返回消息
+    robot -->> users: 回复消息

@@ -1,0 +1,83 @@
+{
+  "name": "aiyou-wechaty-robot",
+  "version": "1.1.0",
+  "description": "aiyou-wechaty-robot",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint --fix",
+    "test": "vue-cli-service test:unit",
+    "cz": "npm run lint && git add . && git cz  && npm run log",
+    "lint-fix-2": "eslint --fix --ext .js ./",
+    "log": "conventional-changelog --config ./node_modules/vue-cli-plugin-commitlint/lib/log -i CHANGELOG.md -s -r 0",
+    "push": "git push origin master:master",
+    "release": "standard-version",
+    "push-tag": "git push --follow-tags origin master",
+    "czpush": "npm run cz && npm run push",
+    "open-source-push": "npm run cz && git push origin open-source:open-source",
+    "tagpush": "npm run release && npm run push-tag"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "core-js": "^3.6.4",
+    "view-design": "^4.1.3",
+    "vue": "^2.6.10",
+    "vue-axios": "^2.1.5",
+    "vue-cookie": "^1.1.4",
+    "vue-router": "^3.1.6",
+    "vuex": "^3.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@types/axios": "^0.14.0",
+    "@vue/cli-plugin-babel": "^4.2.3",
+    "@vue/cli-plugin-eslint": "^4.2.3",
+    "@vue/cli-plugin-unit-jest": "^4.2.3",
+    "@vue/cli-service": "^4.2.3",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-eslint": "^10.1.0",
+    "body-parser": "^1.19.0",
+    "chalk": "^3.0.0",
+    "chokidar": "^3.3.1",
+    "commitizen": "^4.0.3",
+    "commitlint": "^8.2.0",
+    "conventional-changelog-cli": "^2.0.28",
+    "cz-conventional-changelog": "^3.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "husky": "^4.2.3",
+    "mockjs": "^1.1.0",
+    "pre-commit": "^1.2.2",
+    "standard-version": "^7.1.0",
+    "vue-cli-plugin-commitlint": "~1.0.12",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "standard-version": {
+    "skip": {
+      "changelog": true
+    }
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/vue-cli-plugin-commitlint/lib/cz"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "author": "哎哟迪奥",
+  "license": "MPL-2"
+}
