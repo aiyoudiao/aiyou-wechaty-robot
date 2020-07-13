@@ -51,7 +51,7 @@
     "husky": "^4.2.3",
     "mockjs": "^1.1.0",
     "pre-commit": "^1.2.2",
-    "standard-version": "^7.1.0",
+    "standard-version": "^8.0.1",
     "vue-cli-plugin-commitlint": "~1.0.12",
     "vue-template-compiler": "^2.6.10"
   },
