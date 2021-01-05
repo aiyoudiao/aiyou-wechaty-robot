@@ -18,7 +18,7 @@
     "tagpush": "npm run release && npm run push-tag"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.4",
     "view-design": "^4.1.3",
     "vue": "^2.6.10",
